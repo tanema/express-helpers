@@ -61,7 +61,7 @@ module.exports = {
   },
   test_submit_tag : function() {
     assert.equal( "<input type=\'submit\' value=\'Submit\' />",
-                helpers.submit_tag('Submit')  );
+                helpers.submit_tag()  );
 	assert.equal( "<input onclick='window.location=\"/new/location\";return false;' type='submit' value='holla' />",
                 helpers.submit_tag('holla', '/new/location')  );
   },
