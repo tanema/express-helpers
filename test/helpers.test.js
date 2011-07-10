@@ -40,14 +40,6 @@ module.exports = {
     assert.equal( "<a href='/reply' >Reply</a>",  helpers.link_to_if(true, 'Reply', '/reply' )  );
     assert.equal( "Reply",  helpers.link_to_if(false, 'Reply', '/reply' )  );
   },
-  // test_link_to_unless_current : function() {
-  //   assert.equal( "<a href='/reply' >Reply</a>",  helpers.link_to_unless_current('Reply', '/reply' )  );
-  //   assert.equal( "Reply",  helpers.link_to_unless_current('Reply', window.location.pathname )  );
-  // },
-  test_password_field_tag : function() {
-    assert.equal( "<input id='something[interesting]' value='5' type='password' name='something[interesting]' />",
-                helpers.password_field_tag('something[interesting]', 5)  );
-  },
   test_password_field_tag : function() {
     assert.equal( "<input id='something[interesting]' value='5' type='password' name='something[interesting]' />",
                 helpers.password_field_tag('something[interesting]', 5)  );
@@ -90,5 +82,14 @@ module.exports = {
   test_css_tag:function(){
 	assert.equal("<link rel='stylesheet' href='/stylesheet/style.css' type='text/css' charset='utf-8' />",
 				helpers.css_tag('/stylesheet/style.css') );
+  },
+  test_checkbox_tag:function(){
+	assert.equal("<input id='user_check_box' value='user' type='checkbox' name='user_check_box' />",
+				helpers.checkbox_tag('user_check_box', 'user') );
+  },
+  test_radio_tag:function(){
+	assert.equal("<input id='user_radio' value='user' type='radio' name='user_radio' />",
+				helpers.radio_tag('user_radio', 'user') );
   }
+  
 };

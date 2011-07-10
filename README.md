@@ -9,9 +9,11 @@ Express Helpers provides view helpers for common tasks. These helpers are very s
 
 * date_tag
 * css_tag
+* checkbox_tag
 * form_tag
 * form_tag_end
 * hidden_field_tag
+* img_tag
 * input_field_tag
 * js_tag
 * label_for
@@ -19,18 +21,11 @@ Express Helpers provides view helpers for common tasks. These helpers are very s
 * link_to_if
 * link_to_unless
 * password_field_tag
+* radio_tag
 * select_tag
-* single_tag_for
-* start_tag_for
 * submit_tag
-* tag
-* tag_end
-* text_area_tag
-* text_tag
+* text_area_tag/text_tag
 * text_field_tag
-* url_for
-* img_tag
-
 
 ## Installation
 
@@ -72,6 +67,18 @@ Creates a css tag
 			   href='/stylesheet/style.css' 
 			   type='text/css' 
 			   charset='utf-8' />"
+			   
+### checkbox_tag(name, value, html_options)
+Creates a checkbox
+
+	checkbox_tag('user_check_box', 'user') => 
+	"<input id='user_check_box' value='user' type='checkbox' name='user_check_box' />"
+
+### radio_tag(name, value, html_options)
+Creates a radio button
+
+	radio_tag('user_radio', 'user')  =>
+	"<input id='user_radio' value='user' type='radio' name='user_radio' />"
 
 ### form_tag(action, html_options)  
 Creates a start form tag.
@@ -80,7 +87,7 @@ Creates a start form tag.
 
 
 ### end_form_tag() 
-Creates a start form tag.
+Creates a end form tag.
 
     form_tag_end()
 
@@ -164,16 +171,6 @@ Returns a select tag.
         <option value='3'>Third Choice</option>
      </select>"
 
-
-
-### single_tag_for
-
-Helper for creating a single tag like <br/>
-
-### start_tag_for
-
-Helper for creating a beginning tag like <div>
-
 ### submit_tag
 Creates a submit tag.
 
@@ -185,18 +182,12 @@ Creates a submit tag.
             value='holla' 
             type='submit' />"
 
-### tag
-
-Creates a general tag.
-
-### tag_end
-
-Creates an end tag like `</div>`.
-
-### text_area_tag
+### text_area_tag / text_tag
+Both create a text area tag
 
     text_area_tag('task[description]', 'Here is some text.\nA new line.') =>
-
+    text_tag('task[description]', 'Here is some text.\nA new line.') =>
+	
     "<textarea id='task[description]' 
                name='task[description]' 
                cols='50' 
@@ -212,13 +203,6 @@ Creates an end tag like `</div>`.
             value='5' 
             type='text' 
             name='something[interesting]'/>"
-
-
-
-### url_for
-
-returns a string that changes the url.
-
 
 ## License
 
