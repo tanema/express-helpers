@@ -83,5 +83,15 @@ module.exports = {
   test_label_for_tag:function(){
 	assert.equal( "<label for=\'user_id\' >User</label>",
                 helpers.label_for('user_id')  );
+	assert.equal( "<label for=\'book[user_id]\' >User</label>",
+                helpers.label_for('book[user_id]')  );
+  },
+  test_js_tag:function(){
+	assert.equal("<script type='text/javascript' src='/javascript/script.js' charset='utf-8' ></script>",
+				helpers.js_tag('/javascript/script.js')  );
+  },
+  test_css_tag:function(){
+	assert.equal("<link rel='stylesheet' href='/stylesheet/style.css' type='text/css' charset='utf-8' />",
+				helpers.css_tag('/stylesheet/style.css') );
   }
 };
