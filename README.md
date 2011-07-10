@@ -177,7 +177,9 @@ Returns a select tag.
 ### submit_tag([text[, url, html_options]])
 Creates a submit tag.
 
-    submit_tag('Submit') => "<input type=\'submit\' value=\'Submit\' />"
+    submit_tag('Submit This') => "<input type=\'submit\' value=\'Submit This\' />"
+    submit_tag() => "<input type=\'submit\' value=\'Submit\' />"
+    submit_tag({class:'button'}) => "<input class='button' type=\'submit\' value=\'Submit\' />"
 	
 	submit_tag('holla', '/new/location') =>    
 	
