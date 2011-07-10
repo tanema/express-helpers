@@ -8,6 +8,8 @@ Express Helpers is a port of EJS's ViewHelpers.
 Express Helpers provides view helpers for common tasks. These helpers are very similar to those found in the Ruby on Rails framework.
 
 * date_tag
+* time_tag
+* date_time_tag
 * css_tag
 * checkbox_tag
 * form_tag
@@ -54,10 +56,23 @@ If you want to only use some helpers require without the app and register necess
 ## Details
 
 
-### date_tag(name, value, html_options)
+### date_tag(name, [value, html_options])
 Creates a date tag
 
     date_tag('Installation[date]', new Date(1982, 10,20) )
+    date_tag('Installation[date]') // just on current time
+	
+### time_tag(name, [value, html_options])
+Creates a time tag
+
+    time_tag('Installation[time]', new Date(1982, 10,20) )
+    time_tag('Installation[time]') // just on current time
+	
+### date_time_tag(name, [value, html_options])
+Creates a time tag
+
+    date_time_tag('Installation[time]', new Date(1982, 10,20) )
+    date_time_tag('Installation[time]') // just on current time
 
 ### css_tag(src, html_options)
 Creates a css tag
