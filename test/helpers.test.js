@@ -23,10 +23,6 @@ module.exports = {
     assert.equal( "<input id=\'something[interesting]\' value=\'5\' type=\'hidden\' name=\'something[interesting]\' />",
                 helpers.hidden_field_tag('something[interesting]', 5)  );
   },
-  test_input_field_tag: function() {
-    assert.equal( "<input id='something[interesting]' value='5' type='text' name='something[interesting]' />",
-                helpers.input_field_tag('something[interesting]', 5)  );
-  },
   // test_current_page : function() {
   //   assert( helpers.is_current_page(window.location.href) );
   //   assert( helpers.is_current_page(window.location.pathname) );

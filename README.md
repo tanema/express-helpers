@@ -16,7 +16,6 @@ Express Helpers provides view helpers for common tasks. These helpers are very s
 * form_tag_end
 * hidden_field_tag
 * img_tag
-* input_field_tag
 * js_tag
 * label_for
 * link_to
@@ -74,7 +73,7 @@ Creates a time tag
     date_time_tag('Installation[time]', new Date(1982, 10,20) )
     date_time_tag('Installation[time]') // just on current time
 
-### css_tag(src, html_options)
+### css_tag(src[, html_options])
 Creates a css tag
 
 	css_tag('/stylesheet/style.css') =>
@@ -83,19 +82,19 @@ Creates a css tag
 			   type='text/css' 
 			   charset='utf-8' />"
 			   
-### checkbox_tag(name, value, html_options)
+### checkbox_tag(name, value[, html_options])
 Creates a checkbox
 
 	checkbox_tag('user_check_box', 'user') => 
 	"<input id='user_check_box' value='user' type='checkbox' name='user_check_box' />"
 
-### radio_tag(name, value, html_options)
+### radio_tag(name, value[, html_options])
 Creates a radio button
 
 	radio_tag('user_radio', 'user')  =>
 	"<input id='user_radio' value='user' type='radio' name='user_radio' />"
 
-### form_tag(action, html_options)  
+### form_tag(action[, html_options])  
 Creates a start form tag.
 
     form_tag('/myaction',{multipart: true}) 
@@ -107,7 +106,7 @@ Creates a end form tag.
     form_tag_end()
 
 
-### hidden_field_tag( name,  value,  html_options)
+### hidden_field_tag( name,  value[,  html_options])
 Creates a hidden field.
 
 	hidden_field_tag('something[interesting]', 5) => 
@@ -118,23 +117,12 @@ Creates a hidden field.
             name=\'something[interesting]\'/>"
 
 
-### img_tag
+### img_tag(image_location, alt[, html_options])
 Creates an image tag.
 
     img_tag('/some.png', 'something') => "<img src='/some.png' alt='something' />"
 
-
-### input_field_tag
-Creates an input field tag.
-
-    input_field_tag('something[interesting]', 5) => 
-
-    "<input id='something[interesting]' 
-            value='5' 
-            type='text' 
-            name='something[interesting]'/>"
-
-### js_tag
+### js_tag(url[, html_options])
 Creates a javascript script tag
 
 	js_tag('/javascript/script.js') =>
@@ -142,14 +130,14 @@ Creates a javascript script tag
 				  src='/javascript/script.js' 
 				  charset='utf-8' ></script>"
 				  
-### label_for
+### label_for(name[, text, html_options])
 Creates a label for tag
 	
 	label_for('user_id') => "<label for=\'user_id\' >User</label>"
      
 	label_for('book[user_id]') => "<label for=\'book[user_id]\' >User</label>"
 
-### link_to
+### link_to(name[, url, html_options])
 Creates a link to another page.
 
     link_to('hello world', '/something/here') => "<a href='/something/here' >hello world</a>"
@@ -160,7 +148,7 @@ Just like link_to if the condition is true. If condition is false it returns nam
 ### link_to_unless(condition, name, url, html_options, block)
 Just like link_to if the condition is false. If condition is true it returns name.
 
-### password_field_tag
+### password_field_tag(name, value, html_options)
 Returns a password field.
 
     password_field_tag('something[interesting]', 5) => 
@@ -172,7 +160,7 @@ Returns a password field.
 
 
 
-### select_tag
+### select_tag(name, value, choices[, html_options])
 Returns a select tag.
 
     var choices = [ {value: 1,    text: 'First Choice' }, 
@@ -186,7 +174,7 @@ Returns a select tag.
         <option value='3'>Third Choice</option>
      </select>"
 
-### submit_tag
+### submit_tag([text[, url, html_options]])
 Creates a submit tag.
 
     submit_tag('Submit') => "<input type=\'submit\' value=\'Submit\' />"
@@ -197,7 +185,7 @@ Creates a submit tag.
             value='holla' 
             type='submit' />"
 
-### text_area_tag / text_tag
+### text_area_tag(name[, value, html_options]) / text_tag(name[, value, html_options])
 Both create a text area tag
 
     text_area_tag('task[description]', 'Here is some text.\nA new line.') =>
@@ -210,7 +198,7 @@ Both create a text area tag
 
 
 
-### text_field_tag
+### text_field_tag(name[, value, html_options])
 
     text_field_tag('something[interesting]', 5) => 
 
