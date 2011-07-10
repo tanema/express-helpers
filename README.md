@@ -68,7 +68,7 @@ Creates a date tag
 ### css_tag(src, html_options)
 Creates a css tag
 
-	helpers.css_tag('/stylesheet/style.css') =>
+	css_tag('/stylesheet/style.css') =>
 	"<link rel='stylesheet' 
 			   href='/stylesheet/style.css' 
 			   type='text/css' 
@@ -116,7 +116,7 @@ Creates an input field tag.
 ### js_tag
 Creates a javascript script tag
 
-	helpers.js_tag('/javascript/script.js') =>
+	js_tag('/javascript/script.js') =>
 	"<script type='text/javascript' 
 				  src='/javascript/script.js' 
 				  charset='utf-8' ></script>"
@@ -124,9 +124,9 @@ Creates a javascript script tag
 ### label_for
 Creates a label for tag
 	
-	helpers.label_for('user_id') => "<label for=\'user_id\' >User</label>"
+	label_for('user_id') => "<label for=\'user_id\' >User</label>"
      
-	helpers.label_for('book[user_id]') => "<label for=\'book[user_id]\' >User</label>"
+	label_for('book[user_id]') => "<label for=\'book[user_id]\' >User</label>"
 
 ### link_to
 Creates a link to another page.
