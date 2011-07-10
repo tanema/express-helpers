@@ -16,7 +16,6 @@ Express Helpers provides view helpers for common tasks. These helpers are very s
 * js_tag
 * label_for
 * link_to
-* submit_link_to
 * link_to_if
 * link_to_unless
 * password_field_tag
@@ -133,19 +132,6 @@ Creates a link to another page.
 
     link_to('hello world', '/something/here') => "<a href='/something/here' >hello world</a>"
 
-
-
-### submit_link_to
-Creates a submit button that links to another page.
-
-    submit_link_to('holla', '/new/location') => 
-
-    "<input onclick='window.location=\"/new/location\";return false;' 
-            value='holla' 
-            type='submit' />"
-
-
-
 ### link_to_if(condition, name, url, html_options, post, block)
 Just like link_to if the condition is true. If condition is false it returns name.
 
@@ -192,6 +178,12 @@ Helper for creating a beginning tag like <div>
 Creates a submit tag.
 
     submit_tag('Submit') => "<input type=\'submit\' value=\'Submit\' />"
+	
+	submit_tag('holla', '/new/location') =>    
+	
+	"<input onclick='window.location=\"/new/location\";return false;' 
+            value='holla' 
+            type='submit' />"
 
 ### tag
 

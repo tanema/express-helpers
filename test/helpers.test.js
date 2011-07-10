@@ -32,11 +32,6 @@ module.exports = {
   //   assert( helpers.is_current_page(window.location.pathname) );
   //   assert.equal(false,  helpers.is_current_page('juptierit.com') );
   // },
-  test_submit_link_to : function() {
-
-    assert.equal( "<input onclick='window.location=\"/new/location\";return false;' value='holla' type='submit' >",
-                helpers.submit_link_to('holla', '/new/location')  );
-  },
   test_link_to_unless : function() {
     assert.equal( "<a href='/reply' >Reply</a>",  helpers.link_to_unless(false, 'Reply', '/reply' )  );
     assert.equal( "Reply",  helpers.link_to_unless(true, 'Reply', '/reply' )  );
@@ -79,6 +74,8 @@ module.exports = {
   test_submit_tag : function() {
     assert.equal( "<input type=\'submit\' value=\'Submit\' />",
                 helpers.submit_tag('Submit')  );
+	assert.equal( "<input onclick='window.location=\"/new/location\";return false;' type='submit' value='holla' />",
+                helpers.submit_tag('holla', '/new/location')  );
   },
   test_label_for_tag:function(){
 	assert.equal( "<label for=\'user_id\' >User</label>",
