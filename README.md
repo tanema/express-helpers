@@ -8,10 +8,13 @@ Express Helpers is a port of EJS's ViewHelpers.
 Express Helpers provides view helpers for common tasks. These helpers are very similar to those found in the Ruby on Rails framework.
 
 * date_tag
+* css_tag
 * form_tag
 * form_tag_end
 * hidden_field_tag
 * input_field_tag
+* js_tag
+* label_for
 * link_to
 * submit_link_to
 * link_to_if
@@ -37,25 +40,22 @@ Express Helpers provides view helpers for common tasks. These helpers are very s
     
 ## How to use
 
-Require modules and cretae a server.
+Require express and create a server.
 
     var express = require('express');
-    var helpers = require('express-helpers');
-    var app = express.createServer();
+	var app = express.createServer();
 
-Register necessary view helpers...
+To automatically inclue all helpers initialize like this
+
+	var helpers = require('express-helpers')(app);
+
+If you want to only use some helpers require without the app and register necessary view helpers...
+	
+	var helpers = require('express-helpers')();
 
     app.helpers({
       date_tag: helpers.date_tag
     });
-
-    app.helpers({
-      ...
-
-Or all view helpers:D
-
-    app = helpers.all(app);
-
 
 ## Details
 
@@ -65,6 +65,14 @@ Creates a date tag
 
     date_tag('Installation[date]', new Date(1982, 10,20) )
 
+### css_tag(src, html_options)
+Creates a css tag
+
+	helpers.css_tag('/stylesheet/style.css') =>
+	"<link rel='stylesheet' 
+			   href='/stylesheet/style.css' 
+			   type='text/css' 
+			   charset='utf-8' />"
 
 ### form_tag(action, html_options)  
 Creates a start form tag.
@@ -105,7 +113,20 @@ Creates an input field tag.
             type='text' 
             name='something[interesting]'/>"
 
+### js_tag
+Creates a javascript script tag
 
+	helpers.js_tag('/javascript/script.js') =>
+	"<script type='text/javascript' 
+				  src='/javascript/script.js' 
+				  charset='utf-8' ></script>"
+				  
+### label_for
+Creates a label for tag
+	
+	helpers.label_for('user_id') => "<label for=\'user_id\' >User</label>"
+     
+	helpers.label_for('book[user_id]') => "<label for=\'book[user_id]\' >User</label>"
 
 ### link_to
 Creates a link to another page.

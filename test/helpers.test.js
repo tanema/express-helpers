@@ -1,5 +1,5 @@
 var assert = require('assert');
-var helpers = require('../lib/express-helpers.js');
+var helpers = require('../lib/express-helpers.js')();
 
 module.exports = {
   test_link_to: function() {
