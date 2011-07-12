@@ -228,6 +228,22 @@ Both create a text area tag
             type='text' 
             name='something[interesting]'/>"
 
+## TODO
+
+* mail_to 							http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-mail_to
+* link_to_unless_current	http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to_unless_current
+* current_page 					http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-current_page-3F
+* link_to_function
+* button_to 						http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-button_to
+* escape_javascript
+* number_field_tag
+* other form stuff that I am not sure how I will implement http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html
+* sanitize							http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html
+* sanitize_css
+* strip_links
+* strip_tags
+* tag helpers stuff some already I have some I dont http://api.rubyonrails.org/classes/ActionView/Helpers/TagHelper.html
+			
 ## License
 
 (The MIT License)
