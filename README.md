@@ -1,6 +1,6 @@
 # Express Helpers
 
-Express Helpers is a port of EJS's ViewHelpers.
+Express Helpers is a port of EJS's ViewHelpers and additional methods to make the viewhelpers more in line with RoR
 
 
 ## Features
@@ -31,7 +31,8 @@ Express Helpers provides view helpers for common tasks. These helpers are very s
 
 ## Installation
 
-    npm install express-helpers
+    //please check the download link before using this command and correct according to the current file name 
+    npm install  "https://downloads.github.com/tanema-express-helpers-cbee977.tar.gz"
     
     
 ## How to use
