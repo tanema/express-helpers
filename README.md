@@ -7,6 +7,7 @@ Express Helpers is a port of EJS's ViewHelpers.
 
 Express Helpers provides view helpers for common tasks. These helpers are very similar to those found in the Ruby on Rails framework.
 
+* doctype_tag
 * date_tag
 * time_tag
 * date_time_tag
@@ -54,6 +55,24 @@ If you want to only use some helpers require without the app and register necess
 
 ## Details
 
+### doctype_tag(DOCTYPE)
+
+doctype that are define are:
+
+* HTML5
+* HTML4s
+* HTML4t 
+* HTML4f
+* XHTML1s
+* XHTML1t
+* XHTML1f 
+* XHTML1_1
+
+    doctype_tag(HTML4s) =>
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+										"http://www.w3.org/TR/html4/strict.dtd">
+	doctype_tag() =>
+	<!DOCTYPE HTML>
 
 ### date_tag(name, [value, html_options])
 Creates a date tag
@@ -174,7 +193,7 @@ Returns a select tag.
         <option value='3'>Third Choice</option>
      </select>"
 
-### submit_tag([text[, url, html_options]])
+### submit_tag([text, url, html_options])
 Creates a submit tag.
 
     submit_tag('Submit This') => "<input type=\'submit\' value=\'Submit This\' />"
