@@ -17,7 +17,7 @@ module.exports = {
   },
   test_end_form_tag: function() {
     assert.equal( "</form>",
-                helpers.form_tag_end()  );
+                helpers.form_end_tag()  );
   },
   test_hidden_field_tag: function() {
     assert.equal( "<input id=\'something[interesting]\' value=\'5\' type=\'hidden\' name=\'something[interesting]\' />",
