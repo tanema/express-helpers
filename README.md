@@ -87,11 +87,12 @@ doctype that are define are:
 * XHTML1f 
 * XHTML1_1
 
+    
     doctype_tag(HTML4s) =>
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
 										"http://www.w3.org/TR/html4/strict.dtd">
-	doctype_tag() =>
-	<!DOCTYPE HTML>
+    doctype_tag() =>
+    <!DOCTYPE HTML>
 
 ### date_tag(name, [value, html_options])
 Creates a date tag
