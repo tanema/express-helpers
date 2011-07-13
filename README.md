@@ -2,32 +2,49 @@
 
 Express Helpers is a port of EJS's ViewHelpers and additional methods to make the viewhelpers more in line with RoR
 
-
 ## Features
 
 Express Helpers provides view helpers for common tasks. These helpers are very similar to those found in the Ruby on Rails framework.
+If there are any here that are undocumented they will be soon  
 
-* doctype_tag
-* date_tag
-* time_tag
-* date_time_tag
-* css_tag
+* button_to / button_link_to
+* cdata
 * checkbox_tag
+* color_field_tag
+* css_tag
+* date_tag
+* date_time_tag
+* doctype_tag
+* email_field_tag
+* end_tag
+* file_field_tag
 * form_tag
-* form_tag_end
+* form_end_tag
 * hidden_field_tag
 * img_tag
+* image_submit_tag
+* input_field_tag
 * js_tag
+* js_button
 * label_for
 * link_to
 * link_to_if
 * link_to_unless
+* number_field_tag
 * password_field_tag
+* phone_field_tag / telephone_field_tag
 * radio_tag
+* reset_field_tag
+* search_field_tag
 * select_tag
+* single_tag_for
+* start_tag_for
 * submit_tag
-* text_area_tag/text_tag
+* tag
+* text_area_tag / text_tag
 * text_field_tag
+* time_tag
+* url_field_tag
 
 ## Installation
 
@@ -42,17 +59,9 @@ Require express and create a server.
     var express = require('express');
 	var app = express.createServer();
 
-To automatically inclue all helpers initialize like this
+To automatically inclue all helpers initialize like this. The app is required in my version so dynamic helpers are also used
 
 	var helpers = require('express-helpers')(app);
-
-If you want to only use some helpers require without the app and register necessary view helpers...
-	
-	var helpers = require('express-helpers')();
-
-    app.helpers({
-      date_tag: helpers.date_tag
-    });
 
 ## Details
 
@@ -123,7 +132,7 @@ Creates a start form tag.
 ### end_form_tag() 
 Creates a end form tag.
 
-    form_tag_end()
+    form_end_tag()
 
 
 ### hidden_field_tag( name,  value[,  html_options])
@@ -234,16 +243,12 @@ Both create a text area tag
 * mail_to 							http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-mail_to
 * link_to_unless_current	http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to_unless_current
 * current_page 					http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-current_page-3F
-* link_to_function
-* button_to 						http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-button_to
+* html_safe checking **
 * escape_javascript
-* number_field_tag
-* other form stuff that I am not sure how I will implement http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html
 * sanitize							http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html
 * sanitize_css
 * strip_links
 * strip_tags
-* tag helpers stuff some already I have some I dont http://api.rubyonrails.org/classes/ActionView/Helpers/TagHelper.html
 			
 ## License
 
