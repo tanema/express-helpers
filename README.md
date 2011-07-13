@@ -5,7 +5,7 @@ Express Helpers is a port of EJS's ViewHelpers and additional methods to make th
 ## Features
 
 Express Helpers provides view helpers for common tasks. These helpers are very similar to those found in the Ruby on Rails framework.
-If there are any here that are undocumented they will be soon  
+If there are any here that are undocumented they will be soon  I promise
 
 * button_to / button_link_to
 * cdata
@@ -30,6 +30,7 @@ If there are any here that are undocumented they will be soon
 * link_to
 * link_to_if
 * link_to_unless
+* mail_to
 * number_field_tag
 * password_field_tag
 * phone_field_tag / telephone_field_tag
@@ -59,9 +60,17 @@ Require express and create a server.
     var express = require('express');
 	var app = express.createServer();
 
-To automatically inclue all helpers initialize like this. The app is required in my version so dynamic helpers are also used
+To automatically inclue all helpers initialize like this. 
 
 	var helpers = require('express-helpers')(app);
+	
+If you want to only use some helpers require without the app and register necessary view helpers...
+
+    var helpers = require('express-helpers')();
+
+    app.helpers({
+       date_tag: helpers.date_tag
+    });
 
 ## Details
 
@@ -240,7 +249,6 @@ Both create a text area tag
 
 ## TODO
 
-* mail_to 							http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-mail_to
 * link_to_unless_current	http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to_unless_current
 * current_page 					http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-current_page-3F
 * html_safe checking **
