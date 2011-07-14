@@ -17,6 +17,7 @@ If there are any here that are undocumented they will be soon  I promise
 * doctype_tag
 * email_field_tag
 * end_tag
+* escape_js
 * file_field_tag
 * form_tag
 * form_end_tag
@@ -252,8 +253,6 @@ Both create a text area tag
 
 * link_to_unless_current	http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to_unless_current
 * current_page 					http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-current_page-3F
-* html_safe checking **
-* escape_javascript
 * sanitize							http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html
 * sanitize_css
 * strip_links
