@@ -37,6 +37,7 @@ If there are any here that are undocumented they will be soon  I promise
 * phone_field_tag / telephone_field_tag
 * radio_tag
 * reset_field_tag
+* sanitize_css
 * search_field_tag
 * select_tag
 * single_tag_for
@@ -253,9 +254,7 @@ Both create a text area tag
 
 * link_to_unless_current	http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to_unless_current
 * current_page 					http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-current_page-3F
-* sanitize							http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html
-* sanitize_css
-* strip_links
+* strip_links						http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html
 * strip_tags
 			
 ## License
