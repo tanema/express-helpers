@@ -31,6 +31,7 @@ If there are any here that are undocumented they will be soon  I promise
 * link_to
 * link_to_if
 * link_to_unless
+* link_to_unless_current
 * mail_to
 * number_field_tag
 * password_field_tag
@@ -42,6 +43,8 @@ If there are any here that are undocumented they will be soon  I promise
 * select_tag
 * single_tag_for
 * start_tag_for
+* strip_links
+* strip_tags
 * submit_tag
 * tag
 * text_area_tag / text_tag
@@ -249,13 +252,6 @@ Both create a text area tag
             value='5' 
             type='text' 
             name='something[interesting]'/>"
-
-## TODO
-
-* link_to_unless_current	http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to_unless_current
-* current_page 					http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-current_page-3F
-* strip_links						http://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html
-* strip_tags
 			
 ## License
 

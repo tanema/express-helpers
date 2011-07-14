@@ -23,11 +23,6 @@ module.exports = {
     assert.equal( "<input id=\'something[interesting]\' value=\'5\' type=\'hidden\' name=\'something[interesting]\' />",
                 helpers.hidden_field_tag('something[interesting]', 5)  );
   },
-  // test_current_page : function() {
-  //   assert( helpers.is_current_page(window.location.href) );
-  //   assert( helpers.is_current_page(window.location.pathname) );
-  //   assert.equal(false,  helpers.is_current_page('juptierit.com') );
-  // },
   test_link_to_unless : function() {
     assert.equal( "<a href='/reply' >Reply</a>",  helpers.link_to_unless(false, 'Reply', '/reply' )  );
     assert.equal( "Reply",  helpers.link_to_unless(true, 'Reply', '/reply' )  );
@@ -87,5 +82,4 @@ module.exports = {
 	assert.equal("<input id='user_radio' value='user' type='radio' name='user_radio' />",
 				helpers.radio_tag('user_radio', 'user') );
   }
-  
 };
