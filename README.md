@@ -26,6 +26,7 @@ If you want to only use some helpers require without the app and register necess
        date_tag: helpers.date_tag
     });
 
+for helpers usage see the wiki https://github.com/tanema/express-helpers/wiki
 			
 ## License
 
