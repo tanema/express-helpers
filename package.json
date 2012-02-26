@@ -1,10 +1,27 @@
 {
-  "name": "express-helpers",
-  "version": "0.1.0",
-  "description": "Express Helpers",
-  "author": "Masahiro Hayashi <hayashi.masahiro@gmail.com>",
-  "contributors": [{ "name": "Tim Anema", "email": "timanema@gmail.com" }],
-  "keywords": ["express", "helper", "ejs"],
-  "directories": { "lib": "./lib" },
-  "engines": { "node": ">= 0.2.0" }
+  	"name"			: "express-helpers",
+  	"version"		: "1.0.0",
+  	"description"	: "Express Helpers",
+  	"keywords": [
+  		"express", 
+  		"helper", 
+  		"ejs"
+  	],
+  	"author"		: "Masahiro Hayashi <hayashi.masahiro@gmail.com>",
+  	"contributors"	: [
+  		{ "name": "Tim Anema", "email": "timanema@gmail.com" }
+  	],
+  	"directories"	: { 
+  		"lib": "./lib" 
+  	},
+ 	"engines"		: { 
+ 			"node": ">= 0.2.0" 
+ 	},
+ 	"repository" : {
+		"type"   : "git",
+		"url"    : "https://github.com/tanema/express-helpers"
+	},
+	"dependencies": {
+		"ejs": "*"
+	}
 }
