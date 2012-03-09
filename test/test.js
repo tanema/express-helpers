@@ -12,10 +12,7 @@ app.set('view engine', 'ejs');
 app.set('view options', {layout: false});
 
 app.get('/', function(req, res){
-    res.render('test');
-});
-app.get('/test', function(req, res){
-    res.render('test');
+    res.render('test', {user: {username: 'tim', name: 'Tim'}});
 });
 
 app.listen(3000);

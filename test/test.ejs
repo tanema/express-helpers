@@ -1,4 +1,13 @@
 <%- doctype_tag() %>
+
+<% form_for("user", {}, function(f){ %>
+
+	<%- f.label_for("username") %>
+	<%- f.text_field("username") %>
+	<%- f.submit() %>
+
+<% }) %>
+
 <%- button_to("google", "to google", "http://www.google.com") %>
 <%- form_tag('/myaction',{multipart: true}) %>
 <%- hidden_field_tag('something[interesting]', 5) %>
