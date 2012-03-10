@@ -1,31 +1,39 @@
 <%- doctype_tag() %>
 
-<% form_for("user", {}, function(f){ %>
+<%- button_to("google", "to google", "http://www.google.com") %><br />
 
+<%- mail_to("me@domain.com", "Send Me Email", {encode : "hex", subject: "that thing I sent you", body: "did you get that thing I sent you"}) %><br />
+
+<% form_for("user", {multipart: true}, function(f){ %>
+	<%- hidden_field_tag('id', 5) %>
+	
 	<%- f.label_for("username") %>
-	<%- f.text_field("username") %>
-	<%- f.submit() %>
+	<%- f.text_field("username") %><br />
 
+	<%- f.label_for("date") %>
+	<%- f.date_time('date', {twelvehour:true}) %><br />
+
+	<%- f.label_for("email") %>
+	<%- f.email_field('email', 'test@email.com') %><br />
+	
+	<%- f.label_for("website") %>
+	<%- f.url_field('website', 'http://website.com') %><br />
+	
+	<%- f.label_for("file") %>
+	<%- f.file_field('file', 5) %><br />
+
+	<%- f.label_for("search") %>
+	<%- f.search_field('search') %><br />
+
+	<%- f.label_for("phone") %>
+	<%- f.phone_field('something[interesting]') %><br />
+	
+	<%- f.label_for("checkbox") %>
+	<%- f.checkbox("checkbox", "value") %><br />
+
+	<%- f.reset('reset') %><br />
+	<%- f.submit({class: 'button'}) %><br />
 <% }) %>
-
-<%- button_to("google", "to google", "http://www.google.com") %>
-<%- form_tag('/myaction',{multipart: true}) %>
-<%- hidden_field_tag('something[interesting]', 5) %>
-<%- date_time_tag('Installation[date]', {twelvehour:true}) %><br />
-<%- label_for("user_id") %><br />
-<%- text_field_tag('something[interesting]', 5) %><br />
-<%- email_field_tag('something[interesting]', 5) %><br />
-<%- url_field_tag('something[interesting]', 5) %><br />
-<%- file_field_tag('something[interesting]', 5) %><br />
-<%- reset_form_tag('something[interesting]') %><br />
-<%- search_field_tag('something[interesting]') %><br />
-<%- phone_field_tag('something[interesting]') %><br />
-<%- checkbox_tag("cars", "vw") %><br />
-<%- submit_tag({class: 'button'}) %><br />
-<%- end_tag() %>
-<%= is_current_page("http://localhost:3000/") %><br />
-<%= is_current_page("/") %><br />
-<%- mail_to("me@domain.com", "My email", {encode : "hex", subject: "that thing I sent you", body: "did you get that thing I sent you"}) %><br />
-<%- escape_js("this is test js") %><br />
-<%- sanitize_css("background: url('this is a test path')") %><br />
-<%- link_to_unless_current("linky","http://localhost:3000/") %><br />
+is current 'http://localhost:3000/': <%= is_current_page("http://localhost:3000/") %><br />
+is current '/': <%= is_current_page("/") %><br />
+link to unless current [<%- link_to_unless_current("linky","http://localhost:3000/") %>]<br />

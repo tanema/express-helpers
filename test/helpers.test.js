@@ -19,7 +19,7 @@ module.exports = {
 		console.log("date_tag test complete");
 	},
 	test_form_tag: function() {
-		assert.equal( "<form action=\'/myaction\' >",
+		assert.equal( "<form action='/myaction' method='post' enctype='application/x-www-form-urlencoded' >", 
                 helpers.form_tag('/myaction'));
 		console.log("form_tag test complete");
 	},
