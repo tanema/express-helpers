@@ -1,10 +1,11 @@
 {
   	"name"			: "express-helpers",
-  	"version"		: "1.0.0",
+  	"version"		: "1.1.0",
   	"description"	: "Express Helpers",
   	"keywords": [
   		"express", 
-  		"helper", 
+  		"helper",
+      "viewhelper", 
   		"ejs"
   	],
   	"author"		: "Masahiro Hayashi <hayashi.masahiro@gmail.com>",
