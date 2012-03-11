@@ -3,7 +3,7 @@ var express = require("express");
 var app = express.createServer();
 var helpers = require('../lib/express-helpers')(app);
 for (test in testHelper) {
-	testHelper[test]();
+	//testHelper[test]();
 }
 console.log("all tests completed successfully!");
 
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.set('view options', {layout: false});
 
 app.get('/', function(req, res){
-    res.render('test', {user: {username: 'tim', name: 'Tim'}});
+    res.render('test', {user: {id: 5, username: 'tim', name: 'Tim'}});
 });
 
 app.listen(3000);

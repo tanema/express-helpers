@@ -1,11 +1,11 @@
 <%- doctype_tag() %>
 
-<%- button_to("google", "to google", "http://www.google.com") %><br />
+<%- button_to("google", "http://www.google.com", {value: "to google"}) %><br />
 
 <%- mail_to("me@domain.com", "Send Me Email", {encode : "hex", subject: "that thing I sent you", body: "did you get that thing I sent you"}) %><br />
 
 <% form_for("user", {multipart: true}, function(f){ %>
-	<%- hidden_field_tag('id', 5) %>
+	<%- f.hidden_field('id') %>
 	
 	<%- f.label_for("username") %>
 	<%- f.text_field("username") %><br />
@@ -14,13 +14,13 @@
 	<%- f.date_time('date', {twelvehour:true}) %><br />
 
 	<%- f.label_for("email") %>
-	<%- f.email_field('email', 'test@email.com') %><br />
+	<%- f.email_field('email', {value: 'test@email.com'}) %><br />
 	
 	<%- f.label_for("website") %>
-	<%- f.url_field('website', 'http://website.com') %><br />
+	<%- f.url_field('website', {value:'http://website.com'}) %><br />
 	
 	<%- f.label_for("file") %>
-	<%- f.file_field('file', 5) %><br />
+	<%- f.file_field('file', {value: 5}) %><br />
 
 	<%- f.label_for("search") %>
 	<%- f.search_field('search') %><br />
@@ -29,9 +29,9 @@
 	<%- f.phone_field('something[interesting]') %><br />
 	
 	<%- f.label_for("checkbox") %>
-	<%- f.checkbox("checkbox", "value") %><br />
+	<%- f.checkbox("checkbox", {value: "value"}) %><br />
 
-	<%- f.reset('reset') %><br />
+	<%- f.reset() %><br />
 	<%- f.submit({class: 'button'}) %><br />
 <% }) %>
 is current 'http://localhost:3000/': <%= is_current_page("http://localhost:3000/") %><br />

@@ -3,8 +3,8 @@ var helpers = require('../lib/express-helpers.js')();
 
 module.exports = {
 	test_checkbox_tag:function(){
-		assert.equal("<input id='user_check_box' value='user' type='checkbox' name='user_check_box' />",
-				helpers.checkbox_tag('user_check_box', 'user') );
+		assert.equal("<input value='user' id='user_check_box' type='checkbox' name='user_check_box' />",
+				helpers.checkbox_tag('user_check_box', {value:'user'}) );
 		console.log("checkbox_tag test complete");
 	},
 	test_css_tag:function(){
@@ -15,7 +15,7 @@ module.exports = {
 	test_date_tag: function() {
 		var date = new Date(2007,10,20,1,1,1,1);
 		assert.equal( "<select id=\'Installation[date][year]\' value=\'2007\' name=\'Installation[date][year]\' ><option value=\'1992\' >1992</option><option value=\'1993\' >1993</option><option value=\'1994\' >1994</option><option value=\'1995\' >1995</option><option value=\'1996\' >1996</option><option value=\'1997\' >1997</option><option value=\'1998\' >1998</option><option value=\'1999\' >1999</option><option value=\'2000\' >2000</option><option value=\'2001\' >2001</option><option value=\'2002\' >2002</option><option value=\'2003\' >2003</option><option value=\'2004\' >2004</option><option value=\'2005\' >2005</option><option value=\'2006\' >2006</option><option value=\'2007\' selected=\'selected\' >2007</option><option value=\'2008\' >2008</option><option value=\'2009\' >2009</option><option value=\'2010\' >2010</option><option value=\'2011\' >2011</option><option value=\'2012\' >2012</option><option value=\'2013\' >2013</option><option value=\'2014\' >2014</option><option value=\'2015\' >2015</option><option value=\'2016\' >2016</option><option value=\'2017\' >2017</option><option value=\'2018\' >2018</option><option value=\'2019\' >2019</option><option value=\'2020\' >2020</option><option value=\'2021\' >2021</option></select><select id=\'Installation[date][month]\' value=\'10\' name=\'Installation[date][month]\' ><option value=\'0\' >January</option><option value=\'1\' >February</option><option value=\'2\' >March</option><option value=\'3\' >April</option><option value=\'4\' >May</option><option value=\'5\' >June</option><option value=\'6\' >July</option><option value=\'7\' >August</option><option value=\'8\' >September</option><option value=\'9\' >October</option><option value=\'10\' selected=\'selected\' >November</option><option value=\'11\' >December</option></select><select id=\'Installation[date][day]\' value=\'20\' name=\'Installation[date][day]\' ><option value=\'1\' >1</option><option value=\'2\' >2</option><option value=\'3\' >3</option><option value=\'4\' >4</option><option value=\'5\' >5</option><option value=\'6\' >6</option><option value=\'7\' >7</option><option value=\'8\' >8</option><option value=\'9\' >9</option><option value=\'10\' >10</option><option value=\'11\' >11</option><option value=\'12\' >12</option><option value=\'13\' >13</option><option value=\'14\' >14</option><option value=\'15\' >15</option><option value=\'16\' >16</option><option value=\'17\' >17</option><option value=\'18\' >18</option><option value=\'19\' >19</option><option value=\'20\' selected=\'selected\' >20</option><option value=\'21\' >21</option><option value=\'22\' >22</option><option value=\'23\' >23</option><option value=\'24\' >24</option><option value=\'25\' >25</option><option value=\'26\' >26</option><option value=\'27\' >27</option><option value=\'28\' >28</option><option value=\'29\' >29</option><option value=\'30\' >30</option><option value=\'31\' >31</option></select>",
-                helpers.date_tag('Installation[date]', date)  );
+                helpers.date_tag('Installation[date]', {value:date})  );
 		console.log("date_tag test complete");
 	},
 	test_form_tag: function() {
@@ -30,7 +30,7 @@ module.exports = {
 	},
 	test_hidden_field_tag: function() {
 		assert.equal( "<input id=\'something[interesting]\' value=\'5\' type=\'hidden\' name=\'something[interesting]\' />",
-                helpers.hidden_field_tag('something[interesting]', 5)  );
+                helpers.hidden_field_tag('something[interesting]', {value:5})  );
 		console.log("hidden_field_tag test complete");
 	},
 	test_img_tag : function() {
@@ -67,12 +67,12 @@ module.exports = {
 	},
 	test_password_field_tag : function() {
 		assert.equal( "<input id='something[interesting]' value='5' type='password' name='something[interesting]' />",
-                helpers.password_field_tag('something[interesting]', 5)  );
+                helpers.password_field_tag('something[interesting]', {value:5})  );
 		console.log("password_field_tag test complete");
 	},
 	test_radio_tag:function(){
 		assert.equal("<input id='user_radio' value='user' type='radio' name='user_radio' />",
-				helpers.radio_tag('user_radio', 'user') );
+				helpers.radio_tag('user_radio', {value:'user'}) );
 		console.log("test_radio_tag test complete");
 	},
 	test_select_tag : function() {
@@ -80,7 +80,7 @@ module.exports = {
                     {value: 2,      text: 'Second Choice'},
                     {value: '3',    text: 'Third Choice'}  ];
 		assert.equal( "<select id='mySelectElement' value='2' name='mySelectElement' ><option value='1' >First Choice</option><option value='2' selected='selected' >Second Choice</option><option value='3' >Third Choice</option></select>",
-                helpers.select_tag('mySelectElement', 2,  choices)  );
+                helpers.select_tag('mySelectElement', choices, {value:2})  );
 		console.log("select_tag test complete");
 	},
 	test_submit_tag : function() {
@@ -92,12 +92,12 @@ module.exports = {
 	},
 	test_text_area_tag : function() {
 		assert.equal( "<textarea id='task[description]' name='task[description]' cols='50' rows='4' >Here is some text.\nA new line.</textarea>",
-                helpers.text_area_tag('task[description]', 'Here is some text.\nA new line.')  );
+                helpers.text_area_tag('task[description]', {value:'Here is some text.\nA new line.'})  );
 		console.log("text_area_tag test complete");
 	},
 	test_text_field_tag : function() {
 		assert.equal( "<input id='something[interesting]' value='5' type='text' name='something[interesting]' />",
-                helpers.text_field_tag('something[interesting]', 5)  );
+                helpers.text_field_tag('something[interesting]', {value:5})  );
 		console.log("text_field_tag test complete");
 	}
 };
