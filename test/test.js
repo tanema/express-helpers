@@ -1,12 +1,9 @@
 var testHelper = require('./helpers.test.js');
+console.log("all tests completed successfully!");
+
 var express = require("express");
 var app = express.createServer();
 var helpers = require('../lib/express-helpers')(app);
-for (test in testHelper) {
-	//testHelper[test]();
-}
-console.log("all tests completed successfully!");
-
 app.set('views', __dirname);
 app.set('view engine', 'ejs');
 app.set('view options', {layout: false});
