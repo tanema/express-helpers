@@ -1,49 +1,63 @@
 ## Features
 
-If there are any here that are undocumented they will be soon  I promise
+Most helpers (especially the inputs) follow one method for use
 
-please contact me if you are stuck or log an issue I am more than happy to help
+    helper("name/id", [[value,] html_options])
 
-* [button_to / button_link_to](#button_to)
+The html_options is an associative array that basically get translated
+into html attributes
+
+    url_field_tag("input",{class:"url_field"})
+ 
+    => 
+ 
+    <input id='input' type='url' name='input' class='url_field' />
+
+#Markup and Utility
+* [doctype_tag](#doctype_tag)
 * [cdata](#cdata)
+* [escape_js](#escape_js)
+* [js_tag](#js_tag)
+* [css_tag](#css_tag)
+* [sanitize_css](#sanitize_css)
+
+#Buttons
+* [button_to / button_link_to](#button_to)
+* [js_button](#js_button)
+
+#Links
+* [link_to](#link_to)
+* [link_to_if](#link_to_if)
+* [link_to_unless](#link_to_unless)
+* [link_to_unless_current](#link_to_unless_current)
+* [mail_to](#mail_to)
+
+#Form_For
+* [form_for](#form_for)
+
+#Inputs and form elements
 * [checkbox_tag](#checkbox_tag)
 * [color_field_tag](#color_field_tag)
-* [css_tag](#css_tag)
 * [date_tag](#date_tag)
 * [date_time_tag](#date_time_tag)
-* [doctype_tag](#doctype_tag)
 * [email_field_tag](#email_field_tag)
-* [end_tag](#end_tag)
-* [escape_js](#escape_js)
 * [file_field_tag](#file_field_tag)
 * [form_tag](#form_tag)
 * [form_end_tag](#form_end_tag)
 * [hidden_field_tag](#hidden_field_tag)
 * [img_tag](#img_tag)
 * [image_submit_tag](#image_submit_tag)
-* [input_field_tag](#input_field_tag)
-* [js_tag](#js_tag)
-* [js_button](#js_button)
 * [label_for](#label_for)
-* [link_to](#link_to)
-* [link_to_if](#link_to_if)
-* [link_to_unless](#link_to_unless)
-* [link_to_unless_current](#link_to_unless_current)
-* [mail_to](#mail_to)
 * [number_field_tag](#number_field_tag)
 * [password_field_tag](#password_field_tag)
 * [phone_field_tag / telephone_field_tag](#phone_field_tag)
 * [radio_tag](#radio_tag)
-* [reset_field_tag](#reset_field_tag)
-* [sanitize_css](#sanitize_css)
+* [reset_form_tag](#reset_form_tag)
 * [search_field_tag](#search_field_tag)
 * [select_tag](#select_tag)
-* [single_tag_for](#single_tag_for)
-* [start_tag_for](#start_tag_for)
 * [strip_links](#strip_links)
 * [strip_tags](#strip_tags)
 * [submit_tag](#submit_tag)
-* [tag](#tag)
 * [text_area_tag / text_tag](#text_area_tag)
 * [text_field_tag](#text_field_tag)
 * [time_tag](#time_tag)

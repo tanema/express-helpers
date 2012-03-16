@@ -1,5 +1,5 @@
 <%- doctype_tag() %>
-
+<% var date = new Date(2007,10,20,1,1,1,1); %>
 <%- button_to("google", "http://www.google.com") %><br />
 
 <%- mail_to("me@domain.com", "Send Me Email", {encode : "hex", subject: "that thing I sent you", body: "did you get that thing I sent you"}) %><br />
@@ -7,11 +7,11 @@
 <% form_for("user", {multipart: true}, function(f){ %>
 	<%- f.hidden_field('id') %>
 	
-	<%- f.label_for("username") %>
+	<%- f.label_for("username", "test", {class:"test"}) %>
 	<%- f.text_field("username") %><br />
 
 	<%- f.label_for("date") %>
-	<%- f.date_time('date', {twelvehour:true}) %><br />
+	<%- f.date_time('date', date, {twelvehour:true}) %><br />
 
 	<%- f.label_for("email") %>
 	<%- f.email_field('email', {value: 'test@email.com'}) %><br />
