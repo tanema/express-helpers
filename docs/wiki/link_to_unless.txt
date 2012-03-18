@@ -1,0 +1,17 @@
+## link_to_unless(condition, text, url[, html_options])
+Links to a url unless a condition is true
+options
+	callback 	this callback (if provided) is called is the (text, url) if the condition is true
+				otherwise the text shows without a link
+
+	link_to_unless(true,"Reply","/reply")
+	 
+	 => 
+	 
+	Reply
+
+	link_to_unless(true,"Reply","/reply")
+
+	=>
+
+	<a href='/reply' >Reply</a>

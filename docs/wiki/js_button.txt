@@ -1,0 +1,8 @@
+## button_to(value, onclick[, html_options])
+This creates a button that will do a javascript action on click
+
+	js_button("hello","alert('hey')")
+	 
+	 => 
+	 
+	<input onclick='alert('hey')' value='hello' id='' type='button' name='' />

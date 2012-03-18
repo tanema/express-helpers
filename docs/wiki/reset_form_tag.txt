@@ -1,0 +1,8 @@
+## reset_form_tag([text, html_options])
+Creates a reset input tag.
+
+	reset_form_tag()
+	 
+	 => 
+	 
+	<input type='reset' value='Reset' />

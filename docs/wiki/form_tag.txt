@@ -1,0 +1,8 @@
+## form_tag(action[, html_options])  
+Creates a start form tag.
+
+	form_tag("/myaction")
+	 
+	 => 
+	 
+	<form action='/myaction' method='post' enctype='application/x-www-form-urlencoded' >

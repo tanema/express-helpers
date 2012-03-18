@@ -1,0 +1,8 @@
+## color_field_tag(name, [[value,] html_options])
+Creates a color input
+
+	color_field_tag("color",{"value":5})
+	 
+	 => 
+	 
+	<input value='5' id='color' type='color' name='color' />

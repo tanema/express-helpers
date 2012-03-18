@@ -1,0 +1,8 @@
+## checkbox_tag(name, [[value,] html_options])
+Creates a checkbox
+
+	checkbox_tag("user_check_box",{"value":"user"})
+	 
+	 => 
+	 
+	<input value='user' id='user_check_box' type='checkbox' name='user_check_box' />

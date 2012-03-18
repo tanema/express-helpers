@@ -1,0 +1,18 @@
+## link_to_if(condition, text, url[, html_options])
+Links to a url if a condition is true
+options
+	callback 	this callback (if provided) is called is the (text, url) if the condition is false
+				otherwise the text shows without a link
+
+	link_to_if(false,"Reply","/reply")
+	 
+	 => 
+	 
+	Reply
+
+
+	link_to_if(true,"Reply","/reply")
+
+	=>
+
+	<a href='/reply' >Reply</a>

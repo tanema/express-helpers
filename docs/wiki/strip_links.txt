@@ -1,0 +1,8 @@
+## strip_links(content)
+Simply strips html hyperlinks from a string
+
+	strip_links("strip <a href=\"google\">links</a> from here")
+	 
+	 => 
+	 
+	strip links from here

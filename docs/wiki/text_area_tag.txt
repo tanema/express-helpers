@@ -1,0 +1,9 @@
+## text_area_tag(name[[,value,] html_options])
+Create a text area tag
+
+	text_area_tag("task[description]",{"value":"Here is some text.\nA new line."})
+	 
+	 => 
+	 
+	<textarea id='task[description]' name='task[description]' cols='50' rows='4' >Here is some text.
+	A new line.</textarea>

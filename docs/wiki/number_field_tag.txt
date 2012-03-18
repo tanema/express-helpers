@@ -1,0 +1,8 @@
+## number_field_tag(name [,[value,] html_options])
+Creates a number input 
+
+	number_field_tag("number",{"value":5})
+	 
+	 => 
+	 
+	<input value='5' id='number' type='number' name='number' />

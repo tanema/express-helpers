@@ -1,0 +1,12 @@
+## email_field_tag(name [,[value,] html_options])
+Creates a email input 
+
+options
+
+* pattern: this will default to "^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$"
+
+	email_field_tag("email",{"value":"test@email.com"})
+	 
+	 => 
+	 
+	<input value='test@email.com' pattern='^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*).([A-Za-z]{2,})$' id='email' type='email' name='email' />

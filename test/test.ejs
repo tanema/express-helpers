@@ -11,7 +11,7 @@
 	<%- f.text_field("username") %><br />
 
 	<%- f.label_for("date") %>
-	<%- f.date_time('date', date, {twelvehour:true}) %><br />
+	<%- f.date_time('date', date, {twelvehour:true, minute_interval: 15, class: 'test'}) %><br />
 
 	<%- f.label_for("email") %>
 	<%- f.email_field('email', {value: 'test@email.com'}) %><br />

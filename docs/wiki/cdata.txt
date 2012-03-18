@@ -1,0 +1,8 @@
+## cdata(content)
+This will put the content within cdata tags
+
+	cdata("this is cdata")
+	 
+	 => 
+	 
+	<![CDATA[this is cdata]]>

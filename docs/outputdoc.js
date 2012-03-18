@@ -1,5 +1,5 @@
 var helpers = require('../lib/express-helpers.js')();
-var generate_docs = true,
+var generate_docs = false,
 	generate_tests = false;
 var date = new Date(2007,10,20,1,1,1,1);
 var date_string = JSON.stringify(date);
@@ -13,7 +13,6 @@ var methods = [
 	{helper: "checkbox_tag", args: ['user_check_box', {value:'user'}]},
 	{helper: "color_field_tag", args: ['color', {value: 5}]},
 	{helper: "css_tag", args: ['/stylesheet/style.css']},
-	{helper: "css_tag", args: ['/stylesheet/style.css']},
 	{helper: "date_tag", args: ['Installation[date]', {value: date}]},
 	{helper: "date_time_tag", args: ['Installation[datetime]', {value: date}]},
 	{helper: "doctype_tag", args: []},
@@ -23,7 +22,7 @@ var methods = [
 	{helper: "form_tag", args: ['/myaction']},
 	{helper: "form_end_tag", args: []},
 	{helper: "hidden_field_tag", args: ['something[interesting]', {value:5}]},
-	{helper: "img_tag", args: ['/some.png', 'something']},
+	{helper: "img_tag", args: ['/some.png']},
 	{helper: "image_submit_tag", args: ['/some.png', {alt: 'submit'}]},
 	{helper: "js_tag", args: ['/javascript/script.js']},
 	{helper: "js_button", args: ["google", "http://www.google.com"]},
@@ -66,13 +65,15 @@ for(var i = 0; i < methods.length; i++){
 		text += " => \n \n";
 		text += helpers[methods[i].helper].apply(this, methods[i].args) + "\n";
 
-		fs.open("./wiki/" + methods[i].helper + ".txt", 'a', undefined, function(err, fd) { 
-            if(err) throw err; 
-            fs.write(fd, text, undefined, undefined, function(err, written) { 
-                 if(err) throw err; 
-                 fs.close(fd); 
-             }); 
-        }); 
+		(function(helper, text){
+			fs.open("./wiki/" + helper + ".txt", 'a', undefined, function(err, fd) { 
+	            if(err) throw err; 
+	            fs.write(fd, text, undefined, undefined, function(err, written) { 
+	                 if(err) throw err; 
+	                 fs.close(fd); 
+	             }); 
+	        }); 
+		})(methods[i].helper, text);
 	}
 	
 	if(generate_tests){
