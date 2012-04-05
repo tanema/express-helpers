@@ -1,8 +1,0 @@
-## <a name="select_tag"/>select_tag(name, [value,] choices[, html_options])
-Returns a select tag.
-
-	select_tag("mySelectElement",[{"value":1,"text":"First Choice"},{"value":2,"text":"Second Choice"},{"value":"3","text":"Third Choice"}],{"value":2})
-	 
-	 => 
-	 
-	<select value='2' id='mySelectElement' name='mySelectElement' ><option value='1' >First Choice</option><option value='2' selected='selected' >Second Choice</option><option value='3' >Third Choice</option></select>

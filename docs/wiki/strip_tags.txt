@@ -1,8 +1,0 @@
-## strip_tags(content)
-Simply strips html from a string
-
-	strip_tags("strip <b> tags </b> from here")
-	 
-	 => 
-	 
-	strip  tags  from here

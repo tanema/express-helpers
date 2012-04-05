@@ -1,8 +1,0 @@
-## text_field_tag(name[[, value,] html_options])
-Creates a text field input
-
-	text_field_tag("something[interesting]",{"value":5})
-	 
-	 => 
-	 
-	<input value='5' id='something[interesting]' type='text' name='something[interesting]' />

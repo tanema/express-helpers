@@ -1,8 +1,0 @@
-## file_field_tag(name, [[value], html_options])
-Creates a input of type file
-
-	file_field_tag("file",{"value":5})
-	 
-	 => 
-	 
-	<input value='5' id='file' type='file' name='file' />

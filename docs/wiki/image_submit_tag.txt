@@ -1,8 +1,0 @@
-## image_submit_tag(image_location[, html_options])
-Creates a input of type image that be html standards will acts as a submit button
-
-	image_submit_tag("/some.png",{"alt":"submit"})
-	 
-	 => 
-	 
-	<input alt='submit' src='/some.png' type='image' />

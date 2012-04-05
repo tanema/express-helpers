@@ -1,8 +1,0 @@
-## css_tag(src[, html_options])
-Creates a css tag
-
-	css_tag("/stylesheet/style.css")
-	 
-	 => 
-	 
-	<link rel='stylesheet' href='/stylesheet/style.css' type='text/css' charset='utf-8' />

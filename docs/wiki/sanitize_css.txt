@@ -1,8 +1,0 @@
-## sanitize_css(content)
-validates a string for css and strips it of any invalid rules
-
-	sanitize_css("this is invalid css")
-	 
-	 => 
- 
-

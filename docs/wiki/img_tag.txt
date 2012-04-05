@@ -1,8 +1,0 @@
-## img_tag(image_location[, html_options])
-Creates an image tag.
-
-	img_tag("/some.png")
-	 
-	 => 
-	 
-	<img src='/some.png' />

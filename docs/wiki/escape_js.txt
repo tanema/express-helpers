@@ -1,8 +1,0 @@
-## escape_js(content)
-Escapes carriage returns and single and double quotes for JavaScript segments.
-
-	escape_js("var i = 5;")
-	 
-	 => 
-	 
-	var i = 5;

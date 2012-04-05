@@ -1,8 +1,0 @@
-## hidden_field_tag( name  [[value,]  html_options])
-Creates a hidden field.
-
-	hidden_field_tag("something[interesting]", 5 )
-	 
-	 => 
-	 
-	<input value='5' id='something[interesting]' type='hidden' name='something[interesting]' />

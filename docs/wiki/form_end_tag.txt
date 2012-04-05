@@ -1,8 +1,0 @@
-## end_form_tag() 
-Creates a end form tag.
-
-	form_end_tag()
- 
-	 => 
- 
-	</form>

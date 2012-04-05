@@ -1,8 +1,0 @@
-## button_to(value, url [,html_options])
-This creates a hyperlink in the form of a button
-
-	button_to("google","http://www.google.com")
-	 
-	 => 
-	 
-	<input onclick="window.location.href='http://www.google.com'" value='google' id='' type='button' name='' />

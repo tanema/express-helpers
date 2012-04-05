@@ -1,8 +1,0 @@
-## js_tag(url[, html_options])
-Creates a javascript script tag
-
-	js_tag("/javascript/script.js")
-	 
-	 => 
-	 
-	<script type='text/javascript' src='/javascript/script.js' charset='utf-8' ></script>

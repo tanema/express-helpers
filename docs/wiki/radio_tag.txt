@@ -1,8 +1,0 @@
-### radio_tag(name, [[value,] html_options])
-Creates a radio button
-
-	radio_tag("user_radio","user")
-	 
-	 => 
-	 
-	<input value='user' id='user_radio' type='radio' name='user_radio' />

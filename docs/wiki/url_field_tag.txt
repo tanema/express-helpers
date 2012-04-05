@@ -1,8 +1,0 @@
-## url_field_tag(name, [[value,] html_options])
-Creates a url input tag
-
-	url_field_tag("url",{"value":"website.com"})
-	 
-	 => 
-	 
-	<input value='website.com' id='url' type='url' name='url' />
