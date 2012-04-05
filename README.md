@@ -3,9 +3,8 @@
 Express Helpers is a port of EJS's ViewHelpers and additional helpers are very similar to those found in the Ruby on Rails framework.
 
 ## Installation
-
-    //to install this branch you will need to download the source and install it using npm
-    //npm install  express-helpers
+   
+    npm install express-helpers
     
 ## How to use
 
@@ -17,6 +16,10 @@ Require express and create a server.
 To automatically inclue all helpers initialize like this. 
 
 	var helpers = require('express-helpers')(app);
+
+Or more simply if you don't need any reference to the helpers object
+
+    require('express-helpers')(app);
 	
 If you want to only use some helpers require without the app and register necessary view helpers...
 
