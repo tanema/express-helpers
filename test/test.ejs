@@ -36,5 +36,9 @@
 <% }) %>
 
 is current 'http://localhost:3000/': <%= is_current_page("http://localhost:3000/") %><br />
+
+
 is current '/': <%= is_current_page("/") %><br />
+
+
 link to unless current [<%- link_to_unless_current("linky","http://localhost:3000/") %>]<br />
