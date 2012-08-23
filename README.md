@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/tanema/express-helpers.png)](http://travis-ci.org/tanema/express-helpers)
 # Express Helpers
 
 Express Helpers is a port of EJS's ViewHelpers and additional helpers are very similar to those found in the Ruby on Rails framework.
