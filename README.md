@@ -23,6 +23,16 @@ Or more simply if you don't need any reference to the helpers object
 	
 If you want to only use some helpers require without the app and register necessary view helpers...
 
+## Express 3.0
+
+    var helpers = require('express-helpers')();
+
+    app.locals.date_tag = helpers.date_tag;
+    
+**Note: The is_current_page and link_to_unless_current helpers are not available like this since they need to be setup as middleware**    
+    
+## Express 2.0
+
     var helpers = require('express-helpers')();
 
     app.helpers({
